@@ -20,7 +20,8 @@
     BOOL isFirstload;//刚刚进入此页面
 }
 
-@property (nonatomic, strong) CMMotionManager* motionManager;
+@property (nonatomic, strong) CMMotionManager *motionManager;
+@property (nonatomic, strong) NSMutableArray *D_valueArray;
 
 @end
 
@@ -32,6 +33,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
     
+    self.D_valueArray = [NSMutableArray array];
     canRotate = NO;//这个参数是整个问题解决的核心，注意它的变化
     isFirstload = YES;
     [self startMotionManager];
@@ -82,24 +84,37 @@
     double x = deviceMotion.gravity.x;
     double y = deviceMotion.gravity.y;
     double z = deviceMotion.gravity.z;
+    
 //    NSLog(@"X = %f------------Y = %f------------Z = %f",x,y,z);
-    if (fabs(x) - fabs(y) > 0.5){
+    
+    double d_value = fabs(x) - fabs(y);
+    if (_D_valueArray.count < 4) {
+        [self.D_valueArray addObject:[NSNumber numberWithDouble:d_value]];
+        return;
+    }else if(_D_valueArray.count == 4){
+        [self.D_valueArray removeObjectAtIndex:0];
+        [self.D_valueArray addObject:[NSNumber numberWithDouble:d_value]];
+    }
+    if ([_D_valueArray[0] doubleValue] > 0.5 && [_D_valueArray[1] doubleValue] > 0.5 && [_D_valueArray[2] doubleValue] > 0.5 && [_D_valueArray[3] doubleValue] > 0.5) {
+        
+//        NSLog(@"0 === %@ 1 === %@ 2 === %@ 3 === %@",_D_valueArray[0],_D_valueArray[1],_D_valueArray[2],_D_valueArray[3]);
+        
         if (isFirstload) {
             return;
         }
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            if(canRotate == NO){
-                [_motionManager stopDeviceMotionUpdates];
-                UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提醒" message:@"您打开屏幕锁定,请在控制中心关闭" preferredStyle:UIAlertControllerStyleAlert];
-                [ac addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    
-                }]];
-                [self presentViewController:ac animated:YES completion:nil];
-            }
-        });
-    }else if(fabs(y) - fabs(x) > 0.5){// 手机已经竖屏(横屏方向旋转可触发手机屏幕的旋转)
+        if(canRotate == NO){
+            [_motionManager stopDeviceMotionUpdates];
+            UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提醒" message:@"您打开屏幕锁定,请在控制中心关闭" preferredStyle:UIAlertControllerStyleAlert];
+            [ac addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }]];
+            [self presentViewController:ac animated:YES completion:nil];
+        }
+    }
+    if (fabs(y) - fabs(x) > 0.5){// 手机已经竖屏(横屏方向旋转可触发手机屏幕的旋转)
         isFirstload = NO;
-    }else if (fabs(z) > 0.8){// 手机平放状态进入此页面
+    }
+    if (fabs(z) > 0.8){// 手机平放状态进入此页面
         isFirstload = NO;
     }
 }
