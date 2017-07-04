@@ -115,7 +115,7 @@
 				TargetAttributes = {
 					5CE34EB11EAAFAF80024FE25 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8RT428ZDVE;
+						DevelopmentTeam = RG5N2563HN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -279,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RT428ZDVE;
+				DEVELOPMENT_TEAM = RG5N2563HN;
 				INFOPLIST_FILE = ScreenLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haiJiang.ScreenLock;
@@ -292,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RT428ZDVE;
+				DEVELOPMENT_TEAM = RG5N2563HN;
 				INFOPLIST_FILE = ScreenLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haiJiang.ScreenLock;

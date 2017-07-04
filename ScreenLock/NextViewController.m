@@ -122,6 +122,9 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     SlAppDelegate.allowRotation = 4;
+    if ( self.navigationController.childViewControllers.count > 1 ) {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

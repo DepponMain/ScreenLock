@@ -41,6 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     SlAppDelegate.allowRotation = 2;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end
