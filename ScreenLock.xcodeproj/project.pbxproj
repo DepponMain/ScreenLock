@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C0ED9971EB0417600FEDB6E /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ED9961EB0417600FEDB6E /* NextViewController.m */; };
+		5C12FE891F0B802C0022DE51 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C12FE881F0B802C0022DE51 /* NextViewController.m */; };
 		5CE34EB71EAAFAF80024FE25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE34EB61EAAFAF80024FE25 /* main.m */; };
 		5CE34EBA1EAAFAF80024FE25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE34EB91EAAFAF80024FE25 /* AppDelegate.m */; };
 		5CE34EBD1EAAFAF80024FE25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE34EBC1EAAFAF80024FE25 /* ViewController.m */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C0ED9951EB0417600FEDB6E /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
-		5C0ED9961EB0417600FEDB6E /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		5C12FE871F0B802C0022DE51 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		5C12FE881F0B802C0022DE51 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		5CE34EB21EAAFAF80024FE25 /* ScreenLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE34EB61EAAFAF80024FE25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CE34EB81EAAFAF80024FE25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C12FE861F0B802C0022DE51 /* NextController */ = {
+			isa = PBXGroup;
+			children = (
+				5C12FE871F0B802C0022DE51 /* NextViewController.h */,
+				5C12FE881F0B802C0022DE51 /* NextViewController.m */,
+			);
+			path = NextController;
+			sourceTree = "<group>";
+		};
 		5CE34EA91EAAFAF80024FE25 = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +70,11 @@
 		5CE34EB41EAAFAF80024FE25 /* ScreenLock */ = {
 			isa = PBXGroup;
 			children = (
+				5C12FE861F0B802C0022DE51 /* NextController */,
 				5CE34EB81EAAFAF80024FE25 /* AppDelegate.h */,
 				5CE34EB91EAAFAF80024FE25 /* AppDelegate.m */,
 				5CE34EBB1EAAFAF80024FE25 /* ViewController.h */,
 				5CE34EBC1EAAFAF80024FE25 /* ViewController.m */,
-				5C0ED9951EB0417600FEDB6E /* NextViewController.h */,
-				5C0ED9961EB0417600FEDB6E /* NextViewController.m */,
 				5CE34EBE1EAAFAF80024FE25 /* Main.storyboard */,
 				5CE34EC11EAAFAF80024FE25 /* Assets.xcassets */,
 				5CE34EC31EAAFAF80024FE25 /* LaunchScreen.storyboard */,
@@ -157,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CE34EBD1EAAFAF80024FE25 /* ViewController.m in Sources */,
-				5C0ED9971EB0417600FEDB6E /* NextViewController.m in Sources */,
+				5C12FE891F0B802C0022DE51 /* NextViewController.m in Sources */,
 				5CE34EBA1EAAFAF80024FE25 /* AppDelegate.m in Sources */,
 				5CE34EB71EAAFAF80024FE25 /* main.m in Sources */,
 			);
