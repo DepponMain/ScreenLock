@@ -1,7 +1,7 @@
 # ScreenLock
+## 思路
 苹果官方并没有提供可以直接监测屏幕锁定是否打开的接口，最近做的项目中有这个功能，所以就试着写了一个，这个监测的原理是通过重力感应来实现的。
-
-关键判断处的代码：
+## 关键代码
 	
 	//这里是重力感应的处理方法
 	- (void)handleDeviceMotion:(CMDeviceMotion *)deviceMotion{
@@ -42,14 +42,15 @@
 	        isFirstload = NO;
 	    }
 	}
-    
-* 可下载Demo查看完整代码，如有纰漏，欢迎指正--QQ：2779713120
-
-
+    	
 实现思路来源于简书的一篇文章[iOS当用户横屏锁定开启时，怎样提醒用户][id].
 
 [id]: http://www.jianshu.com/p/4acdf1d25319
 
+##### *可下载Demo查看完整代码，如有纰漏，欢迎指正*
+## 联系方式
+* QQ：2779713120
+* 邮箱：mahaijiang0117@126.com
 
 <div class="footer">
 	&copy; 2017/4/26 HJ.M
