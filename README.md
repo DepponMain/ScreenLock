@@ -14,11 +14,11 @@
 	    if (_D_valueArray.count < 6) {
         [self.D_valueArray addObject:[NSNumber numberWithDouble:d_value]];
         return;
-    }else if(_D_valueArray.count == 6){
-        [self.D_valueArray removeObjectAtIndex:0];
-        [self.D_valueArray addObject:[NSNumber numberWithDouble:d_value]];
-    }
-    if ([_D_valueArray[0] doubleValue] > 0.5 && [_D_valueArray[1] doubleValue] > 0.5 && [_D_valueArray[2] doubleValue] > 0.5 && [_D_valueArray[3] doubleValue] > 0.5 && [_D_valueArray[4] doubleValue] > 0.5 && [_D_valueArray[5] doubleValue] > 0.5) {
+	    }else if(_D_valueArray.count == 6){
+		[self.D_valueArray removeObjectAtIndex:0];
+		[self.D_valueArray addObject:[NSNumber numberWithDouble:d_value]];
+	    }
+	    if ([_D_valueArray[0] doubleValue] > 0.5 && [_D_valueArray[1] doubleValue] > 0.5 && [_D_valueArray[2] doubleValue] > 0.5 && [_D_valueArray[3] doubleValue] > 0.5 && [_D_valueArray[4] doubleValue] > 0.5 && [_D_valueArray[5] doubleValue] > 0.5) {
 	        
 	        //        NSLog(@"0 === %@ 1 === %@ 2 === %@ 3 === %@",_D_valueArray[0],_D_valueArray[1],_D_valueArray[2],_D_valueArray[3]);
 	        
